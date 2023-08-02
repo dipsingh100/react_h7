@@ -1,0 +1,108 @@
+.title-cont{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.table-cont{
+    /* border: 1px solid black; */
+    margin-top: 4%;
+    margin-bottom: 1%;
+    background-color: white;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table tr{
+    height: 55px;
+}
+
+tr{
+    border-bottom: 1px solid rgb(104, 103, 103);
+}
+
+table th, table td{
+    padding: 0 20px;
+    text-align: end;
+}
+
+table td:nth-child(1){
+    text-align: left;
+}
+
+.add-new-st{
+    padding: 0 40px;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.form-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 18vh;
+    padding: 8%;
+}
+
+.inp-container{
+    position: relative;
+}
+
+.inp-container input{
+    width: 20vw;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid grey;
+    border-radius: 3px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.inp-container label{
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    padding: 0px 5px;
+    color: grey;
+    transition: top 0.2s;
+    pointer-events: none;
+}
+
+
+.inp-container input:valid + label,
+.inp-container input:focus + label{
+    top: -8px;
+    font-size: 0.8rem;
+    color: #2874A6;
+    background-image: linear-gradient(to top, #ffffff 44%, transparent 49%);
+}
+
+.inp-container input:valid + label{
+    color: grey;
+}
+
+.inp-container input:focus{
+    border: 2px solid #2874A6;
+}
+
+.buttons{
+    padding-right: 12vw;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.buttons button{
+    font-size: 20px;
+    padding: 12px 65px;
+    border-radius: 30px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.buttons> button{
+    background-color: grey;
+}
