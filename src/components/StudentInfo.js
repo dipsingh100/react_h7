@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "../css/students.css";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { AddStudent } from "../features/StudentSlice";
 
 const StudentInfo = () => {
-  const data = useSelector((state)=>state.Details)
+  const navigate = useNavigate()
+  const data = useSelector((state) => state.Details)
   const dispatch = useDispatch()
 
   const [name, setName] = useState("")
@@ -25,6 +26,7 @@ const StudentInfo = () => {
     setCourse("")
     setBranch("")
     dispatch(AddStudent(newStudent))
+    navigate('/students')
   }
   return (
     <>
@@ -47,8 +49,9 @@ const StudentInfo = () => {
         </div>
       </form>
       <div className="buttons">
-        <button>Cancel</button>
-        <Link to={'/students'}><button onClick={handleSubmit}>Submit</button></Link>
+        <button onClick={() => navigate('/students')
+        }>Cancel</button>
+        <button onClick={handleSubmit}>Submit</button>
       </div>
     </>
   );

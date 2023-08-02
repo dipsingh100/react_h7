@@ -25,7 +25,7 @@ tr{
 }
 
 table th, table td{
-    padding: 0 20px;
+    padding: 0 2%;
     text-align: end;
 }
 
@@ -34,17 +34,18 @@ table td:nth-child(1){
 }
 
 .add-new-st{
-    padding: 0 40px;
+    padding: 6%;
     border-radius: 25px;
     font-size: 1.2rem;
     cursor: pointer;
+    width: 16vw;
 }
 
 .form-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    row-gap: 18vh;
-    padding: 8%;
+    row-gap: 8vw;
+    padding: 5% 0%;
 }
 
 .inp-container{
@@ -52,7 +53,7 @@ table td:nth-child(1){
 }
 
 .inp-container input{
-    width: 20vw;
+    width: 60%;
     padding: 10px;
     box-sizing: border-box;
     border: 1px solid grey;
@@ -97,12 +98,25 @@ table td:nth-child(1){
 
 .buttons button{
     font-size: 20px;
-    padding: 12px 65px;
+    padding: 1vw 7vw;
     border-radius: 30px;
     border: 1px solid black;
     cursor: pointer;
 }
 
-.buttons> button{
+.buttons button:first-child{
     background-color: grey;
+}
+
+@media screen and (max-width:500px){
+    .form-container{
+        grid-template-columns: 1fr;
+    }
+    .inp-container input{
+        width: 100%;
+    }
+    .add-new-st{
+        width: 32vw;
+        font-size: 0.8rem;
+    }
 }
